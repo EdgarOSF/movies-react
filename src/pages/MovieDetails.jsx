@@ -13,12 +13,12 @@ export function MovieDetails() {
     setIsLoading(true);
 
     get("/movie/" + movieId).then((data) => {
-        setIsLoading(false);
-        setMovie(data);
+      setMovie(data);
+      setIsLoading(false);
     });
   }, [movieId]);
 
-  if ( true ) {
+  if ( isLoading ) {
       return <Spinner />
   }
 
